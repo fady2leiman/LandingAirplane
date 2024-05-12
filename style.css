@@ -67,33 +67,3 @@ figure {
   left: 50%;
   transform: translate(-50%);
 }
-
-#aeroplane {
-  position: absolute;
-  background-repeat: no-repeat;
-  width: 150px;
-  height: 70px;
-  top: 72%;
-  animation: movingairplane 10s linear;
-  z-index: 100;
-}
-
-@keyframes movingairplane {
-  0% {
-    margin-left: 0%;
-    top: 30%;
-    transform: rotate(30deg);
-  }
-  33% {
-    margin-left: 17%;
-    top: 72%;
-    transform: rotate(0deg);
-  }
-  66% {
-    top: 72%;
-    transform: rotate(0deg);
-  }
-  100% {
-    top: 72%;
-  }
-}
