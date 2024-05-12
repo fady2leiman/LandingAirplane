@@ -1,0 +1,99 @@
+body {
+  background-color: #272b34;
+  color: white;
+}
+
+figure {
+  margin: 0 auto;
+  max-width: 60%;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 35%;
+}
+
+@keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.runway {
+  overflow: hidden;
+  width: 0%;
+  animation: expand 1.5s ease forwards;
+}
+
+/* runway title */
+.y-axis {
+  height: 20px;
+  transform: translate(-40px, 45px) rotate(270deg);
+  position: absolute;
+  left: 0;
+}
+
+.block {
+  display: block;
+  height: 100px;
+  color: #ffffff;
+  font-size: 0.75em;
+  float: left;
+  background-color: #334d5c;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  cursor: pointer;
+}
+.block:nth-of-type(2),
+.legend li:nth-of-type(2):before {
+  background-color: #45b29d;
+}
+.block:nth-of-type(3),
+.legend li:nth-of-type(3):before {
+  background-color: #efc94c;
+}
+
+.block:hover {
+  opacity: 0.65;
+}
+
+.value {
+  display: block;
+  line-height: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#aeroplane {
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 70px;
+  top: 72%;
+  animation: movingairplane 10s linear;
+  z-index: 100;
+}
+
+@keyframes movingairplane {
+  0% {
+    margin-left: 0%;
+    top: 30%;
+    transform: rotate(30deg);
+  }
+  33% {
+    margin-left: 17%;
+    top: 72%;
+    transform: rotate(0deg);
+  }
+  66% {
+    top: 72%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 72%;
+  }
+}

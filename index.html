@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Runway</title>
+  </head>
+  <body>
+    <div>
+      <div id="aeroplane">
+        <img style="width: 150px" src="./BSicon_FLUG.svg" />
+      </div>
+    </div>
+    <figure>
+      <div class="y-axis"><h3>Runway</h3></div>
+      <div class="runway">
+        <span class="block" style="width: 33%" title="A">
+          <span class="value">Zone A</span>
+        </span>
+        <span class="block" style="width: 33%" title="B">
+          <span class="value">Zone B</span>
+        </span>
+        <span class="block" style="width: 33%" title="C">
+          <span class="value">Zone C</span>
+        </span>
+      </div>
+    </figure>
+  </body>
+  <script type="text/javascript">
+    let airportSize = "3000"; //meters
+    let airplaneStop = "2500"; //meters
+    let stoppingPosition = (60 * airplaneStop) / airportSize;
+    document.getElementById("aeroplane").style.marginLeft =
+      stoppingPosition + 16 + "%"; //16  represent the begining of the screen till the start of the runway minus the half of size of the airplane.
+    //document.getElementById("aeroplane").style.marginLeft = "17%";
+  </script>
+</html>
